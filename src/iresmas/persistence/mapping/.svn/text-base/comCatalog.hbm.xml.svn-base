@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<!--Author: Cristopher Cerrillo Callejas -->
+	<!--Representa el mapeo objeto relacional entre la clase y la tabla  -->
+	
+	<class name="iresmas.persistence.entity.ComCatalog" table="com_catalog">
+	
+		<id name="idComCatalog" type="integer" column="IDCOMCATALOG">
+			<generator class="native"/>
+		</id>
+		<property name="catalogName"   		column="CATALOGNAME"  		type="string" 	not-null="true"/>
+		<property name="shortDescription" 	column="SHORTDESCRIPTION" 	type="string" 	not-null="true"/>
+<!--		<property name="idCatalogFather" 	column="IDCATALOGFATHER" 	type="integer" 	not-null="false"/>-->
+		<many-to-one name="catalogChildrens" column="IDCATALOGFATHER" class="iresmas.persistence.entity.ComCatalog" lazy="false"></many-to-one>
+		<property name="longDescription" 	column="LONGDESCRIPTION" 	type="string" 	not-null="true"/>
+		<property name="statusCatalog" 		column="STATUSCATALOG" 		type="integer" 	not-null="true"/>		
+			
+	</class>
+</hibernate-mapping>

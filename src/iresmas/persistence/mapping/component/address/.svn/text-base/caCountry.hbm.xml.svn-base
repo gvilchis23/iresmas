@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--Author: Cristopher Cerrillo Callejas -->
+	<!--Representa el mapeo objeto relacional entre la clase y la tabla  -->
+<hibernate-mapping package="iresmas.persistence.entity.component.address">
+  <class name="CaCountry" table="ca_countries">
+  	<id name="idCountry" type="integer">
+  		<generator class="native"/>
+  	</id>
+  	<property name="countryName" 	column="COUNTRYNAME" 	type="string" not-null="true"/>
+  	<property name="longKey" 		column="LONGKEY" 		type="string" not-null="true" length="3"/>
+  	<property name="localName" 		column="LOCALNAME" 		type="string" not-null="true"/>
+  	<property name="shortKey" 		column="SHORTKEY" 		type="string" not-null="true" length="2"/>
+  	
+  </class>
+  
+</hibernate-mapping>

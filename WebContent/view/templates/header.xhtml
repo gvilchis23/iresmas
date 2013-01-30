@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+
+<head>
+ 	<title>IRESMAS</title>
+ 	<!-- Todas las paginas deben tener esta linea para que las tildes funcionen -->
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+ 	
+</head>
+ 
+	<body>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr>
+
+    <td width="100%" height="10" valign="top" background="../../images/top_0.gif"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="100%" height="49" valign="top"><table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="top"><img src="../../images/top_22.jpg" /></td>
+          </tr>
+          <tr>
+            <td>
+			</td>
+          </tr>
+        </table></td>
+        <td width="119"><img src="../../images/top_2.jpg" /></td>
+      </tr>
+      
+    </table></td>
+  </tr>
+  
+  
+  <h:form>
+<f:view locale="#{login.slcLanguaje}">
+    	<f:loadBundle basename="iresmas.resources.messages" var="msg" />
+    	<rich:toolBar>
+
+			<!--***************** Sales ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.sales']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales']}"/>
+                
+                
+                <rich:menuGroup value="#{msg['lblmenu.sales.marketing']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.marketing.ps']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.marketing.med']}"/>
+                </rich:menuGroup>
+                
+                <rich:menuGroup value="#{msg['lblmenu.sales.pricing']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.pricing.price']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.pricing.cust']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.pricing.mas']}"/>
+                </rich:menuGroup>
+                
+                <rich:menuGroup value="#{msg['lblmenu.sales.administration']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.administration.sal']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.administration.cus']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sales.administration.ship']}"/>
+                </rich:menuGroup>
+                <rich:menuSeparator id="separator1"/>
+                <rich:menuItem submitMode="ajax" value="#{msg['lbllogout']}"/>
+
+            </rich:dropDownMenu>
+
+
+			<!--***************** Inventory  ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.inventory']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.itemMaster']}"/>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.generateMaterialList']}"/>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.warehouseEntry']}"/>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.itemControl']}"/>
+                <rich:menuGroup value="#{msg['lblmenu.inventory.Administration']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.brandCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.areasCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.modelCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.warehousesCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.measurementUnitCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.equivalenceBetweenUnits']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.locationsCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.itemType']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.styleCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.colorCatalog']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.inventory.administration.groupCatalog']}"/>
+                </rich:menuGroup>
+                
+                
+            </rich:dropDownMenu>
+            
+			<!--***************** Manufactury ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.manufacturing']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.manufacturing.finish']}"></rich:menuItem>
+             </rich:dropDownMenu>
+
+			
+			<!--***************** Administration ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.admin']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.sys']}"></rich:menuItem>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.comadmin']}"></rich:menuItem>
+                <rich:menuGroup value="#{msg['lblmenu.admin.financials']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.finan.acc']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.finan.cost']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.finan.acrel']}"/>
+                </rich:menuGroup>
+                <rich:menuGroup value="#{msg['lblmenu.admin.utility']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.utility.bak']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.admin.utility.res']}"/>
+                </rich:menuGroup>
+                
+                
+             </rich:dropDownMenu>
+						
+			<!--***************** Security ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.sec']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sec.user']}" action="mnuser" ></rich:menuItem>
+                <rich:menuItem submitMode="ajax" value="#{msg['lblmenu.sec.rolepermmison']}" action="mnrolepermission"></rich:menuItem>
+             </rich:dropDownMenu>
+
+			
+			<!--***************** Reports ****************** -->
+
+            <rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['lblmenu.reports']}"/> 
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem submitMode="ajax" value="#{msg['report.allreports']}"></rich:menuItem>
+                
+                <rich:menuGroup value="#{msg['report.sales']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.custreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.salmanreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.salesreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.ordhistreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.invopriting']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.warrservreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.warrareport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.salcontreport']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.sales.comipayreport']}"/>
+                </rich:menuGroup>
+                
+                <rich:menuGroup value="#{msg['report.inventory']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.warelisrep']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.itelisrep']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.invstocrep']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.matreorep']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.kardexrep']}"/>
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.inventory.waremovrep']}"/>
+               </rich:menuGroup>
+                
+                <rich:menuGroup value="#{msg['report.admin']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.admin.costcent']}"/>
+                </rich:menuGroup>
+                
+                <rich:menuGroup value="#{msg['report.secu']}">
+                    <rich:menuItem submitMode="ajax" value="#{msg['report.secu.userrep']}"/>
+                </rich:menuGroup>
+                
+                
+                
+                
+             </rich:dropDownMenu>
+			
+                        
+        </rich:toolBar>
+        </f:view>
+    </h:form>
+</table>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/PSLMEX-ERP/!svn/ver/2534/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/security
+END
+SegUserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/PSLMEX-ERP/!svn/ver/2534/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/security/SegUserDao.java
+END
+SegRoleDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/PSLMEX-ERP/!svn/ver/2477/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/security/SegRoleDao.java
+END
+SegModuleDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/PSLMEX-ERP/!svn/ver/2477/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/security/SegModuleDao.java
+END

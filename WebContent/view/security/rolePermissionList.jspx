@@ -1,0 +1,200 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:rich="http://richfaces.org/rich">
+ 
+<ui:composition template="../templates/layout.xhtml">
+ 
+ <ui:define name="body">
+ 	<a4j:form>
+		<body bgcolor="#eeeeee"> 	
+ 		<f:loadBundle basename="iresmas.resources.messages" var="msg" />
+ 		<f:view locale="#{login.slcLanguaje}">
+ 		<table align="center"><tr><td>
+ 		</td></tr>
+	 	<tr><td></td></tr>
+	 	<tr><td>
+	 	
+	 	<h:panelGrid id="search" width="900" columns="4">
+	    <c:if test="${ role.visible == true }">    
+        <f:facet name="header">
+        
+        <rich:toolBar width="900" height="26" itemSeparator="grid">
+      	<rich:toolBarGroup location="left">
+        <h:outputText value="#{msg.lblsearchparam}" />  
+      	</rich:toolBarGroup>
+      	<rich:toolBarGroup location="right">
+        	 <a4j:commandButton image="../../images/close.gif" reRender="search" action="#{role.panelNotVisible}"></a4j:commandButton>
+      	</rich:toolBarGroup>
+        </rich:toolBar>
+        </f:facet>
+        <rich:panel style="background-color:#eeeeee;">
+        <h:outputText value="#{msg.lbrol}" /><rich:spacer width="10"/>
+        <h:inputText id="txtRol" value="#{role.role}"/><rich:spacer width="10"/>
+        <h:outputText value="#{msg['role.module']}" /><rich:spacer width="10"/>
+        <h:inputText id="txtModel" value="#{role.module}"/><rich:spacer width="10"/>
+        <h:outputText value="#{msg['role.submodule']}" /><rich:spacer width="10"/>
+        <h:inputText id="txtSub" value="#{role.submodule}"/><rich:spacer width="10"/>
+        <h:outputText value="#{msg['role.option']}" /><rich:spacer width="10"/>
+        <h:inputText id="txtOption" value="#{role.option}"/>
+      
+     	<div style="width:100%;" align="center">
+      	<rich:spacer height="25"/>
+      	<a4j:commandButton style="float:center"  value="#{msg.lbsearch}"/><rich:spacer width="15"/>
+      	<a4j:commandButton style="float:center"  value="#{msg.lblclean}"/>
+	    </div>
+	    </rich:panel>
+	    </c:if>
+	    </h:panelGrid>
+	    </td></tr>
+	 	<tr><td></td></tr>
+	 	<tr><td></td></tr>
+	 	<tr align="right"><td bgcolor="#345075" width="900">
+	 	<table align="right">
+	 	<tr>
+	 	<td><a4j:commandButton image="../../images/refresh.png"></a4j:commandButton></td>
+	 	<td>
+	 	
+	 	<rich:dropDownMenu>
+                <f:facet name="label"> 
+                    <h:panelGroup>
+                        <h:graphicImage value="../../images/export.png" styleClass="pic"/>
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem value="">
+                <p:dataExporter type="pdf" target="tbl"  fileName="RolesList"/>
+                <f:facet name="icon">
+                    <h:graphicImage value="../../images/pdf.png" />
+                    </f:facet>
+                </rich:menuItem>
+                
+                <rich:menuItem value="">
+                    <p:dataExporter type="xls" target="tbl" fileName="RolesList"/>
+                    <f:facet name="icon">
+                    <h:graphicImage value="../../images/excel.png" />
+                    </f:facet>
+                
+                </rich:menuItem>
+                
+                
+                <rich:menuItem value="">
+                <p:dataExporter type="csv" target="tbl" fileName="RolesList"/>
+                <f:facet name="icon">
+             		<h:graphicImage value="../../images/csv.png" />
+                    </f:facet>
+                </rich:menuItem>
+            </rich:dropDownMenu>
+ 	
+ 	</td>
+ 	<td>
+ 	<a4j:commandButton id="btnSearch" image="../../images/search.png" reRender="search" action="#{role.panelVisible}"></a4j:commandButton>
+ 	</td>
+ 	</tr>
+ 	</table>
+ 	
+ 	</td></tr>
+ 	<tr align="center">
+ 	<td>
+
+ 	<rich:dataTable   
+                    onRowMouseOver="this.style.backgroundColor='#F1F1F1'"
+                    onRowMouseOut="this.style.backgroundColor='#{a4jSkin.tableBackgroundColor}'"
+                    cellpadding="0" cellspacing="0" id="listroles" value="#{role.roleList}"
+                    width="900" var="list" align="center" rows="10"  columnClasses="center">
+ 					       
+ 					       <rich:column> 
+                			<f:facet name="header">
+                    			<rich:spacer />
+                    		</f:facet>
+                    		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                			</rich:column>
+ 					       
+ 					       <rich:column sortBy="#{list.roleName}"> 
+                			<f:facet name="header">
+                    			<h:outputText value="#{msg.lblrole}"/>
+                    		</f:facet>
+                			<a4j:commandLink action="rolepermmision"><h:outputText value="#{list.roleName}"/></a4j:commandLink>
+            			   </rich:column>
+            			   
+            			   <rich:column sortBy="#{list.roleDescription}"> 
+                			<f:facet name="header">
+                    			<h:outputText value="#{msg['role.module']}"/>
+                    		</f:facet>
+                			<h:outputText value="#{list.roleDescription}"/>
+            			   </rich:column>
+            			   
+            			   <rich:column sortBy="#{list.roleDescription}"> 
+                			<f:facet name="header">
+                    			<h:outputText value="#{msg['role.submodule']}"/>
+                    		</f:facet>
+                			<h:outputText value="#{list.roleDescription}"/>
+            			   </rich:column>
+            			   
+            			   <rich:column sortBy="#{list.roleDescription}"> 
+                			<f:facet name="header">
+                    			<h:outputText value="#{msg['lblrole.option']}"/>
+                    		</f:facet>
+                			<h:outputText value="#{list.roleDescription}"/>
+            			   </rich:column>
+            			   
+            			   </rich:dataTable>
+                           
+                            <rich:datascroller align="center" for="listroles"  maxPages="5" />
+    </td>              
+    </tr>              
+     
+     <tr><td>
+     
+        
+      </td></tr>
+      <tr><td>
+      <div style="width:100%;" align="center">
+      	<rich:spacer height="20"/>
+      	<h:commandButton value="#{msg.lbnew}" type="submit" action= "rolepermmision"/><rich:spacer width="15"/>
+      	<a4j:commandButton style="float:center"  value="#{msg.lbdelete}"/>
+	    </div>
+      </td>
+      </tr>
+      </table>
+     
+     <p:dataTable id="tbl" var="car" value="#{role.roleList}" paginator="true" rows="10">  
+     <p:column>  
+         <f:facet name="header">  
+             <h:outputText value="ROLE" />  
+         </f:facet>  
+         <h:outputText value="#{car.roleDescription}" />  
+     </p:column>  
+   
+     <p:column>  
+         <f:facet name="header">  
+             <h:outputText value="MODULO" />  
+         </f:facet>  
+         <h:outputText value="#{car.roleDescription}"/>  
+     </p:column>  
+   
+     <p:column>  
+         <f:facet name="header">  
+             <h:outputText value="SUBMODULO" />  
+         </f:facet>  
+         <h:outputText value="#{car.roleDescription}" />  
+     </p:column>  
+   
+     <p:column>  
+         <f:facet name="header">  
+             <h:outputText value="OPTION" />  
+         </f:facet>  
+         <h:outputText value="#{car.roleDescription}" />  
+    </p:column>  
+ </p:dataTable>
+     
+     
+    </f:view>
+</body>
+ 	</a4j:form>
+ 	</ui:define>
+</ui:composition>
+</jsp:root>

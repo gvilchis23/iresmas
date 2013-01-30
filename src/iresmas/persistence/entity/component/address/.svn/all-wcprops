@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/PSLMEX-ERP/!svn/ver/2502/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/entity/component/address
+END
+CaState.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/entity/component/address/CaState.java
+END
+CaCountry.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/entity/component/address/CaCountry.java
+END
+CaAddress.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/PSLMEX-ERP/!svn/ver/2502/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/entity/component/address/CaAddress.java
+END
+CaCity.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/entity/component/address/CaCity.java
+END

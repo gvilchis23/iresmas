@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+
+	<navigation-rule>
+			<from-view-id>/view/security/login.jspx</from-view-id>
+			<navigation-case>
+				<from-outcome>access</from-outcome>
+				<to-view-id>/view/general/mainMenu.jspx</to-view-id>
+				<redirect/>
+			</navigation-case>
+	</navigation-rule>
+	
+	
+	
+	<navigation-rule>
+			<from-view-id>/view/*</from-view-id>
+			<navigation-case>
+				<from-outcome>mnuser</from-outcome>
+				<to-view-id>/view/security/userList.jspx</to-view-id>
+				<redirect/>
+			</navigation-case>
+			<navigation-case>
+				<from-outcome>newuser</from-outcome>
+				<to-view-id>/view/security/newUser.jspx</to-view-id>
+				<redirect/>
+			</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+			<from-view-id>/view/*</from-view-id>
+			<navigation-case>
+				<from-outcome>mnrolepermission</from-outcome>
+				<to-view-id>/view/security/rolePermissionList.jspx</to-view-id>
+				<redirect/>
+			</navigation-case>
+			<navigation-case>
+				<from-outcome>rolepermmision</from-outcome>
+				<to-view-id>/view/security/rolePermission.jspx</to-view-id>
+				<redirect/>
+			</navigation-case>
+			
+	</navigation-rule>
+
+
+</faces-config>

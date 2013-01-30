@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+ 
+ <head>
+ 	<title>IRESMAS</title>
+  </head>
+ 
+	<body>
+	<f:view locale="#{login.slcLanguaje}">
+    <f:loadBundle basename="iresmas.resources.messages" var="msg" />
+
+ 
+<table width="100%" border="0" bgcolor="#3e4c6c">
+  <tr>
+    <td class="white"><p><h:outputText
+     value="#{msg.lblreserved}"/></p>
+    <p></p></td>
+  </tr>
+</table>
+
+</f:view>
+	</body>
+</html>

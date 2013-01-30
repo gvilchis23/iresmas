@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="iresmas.persistence.entity">
+  <class name="ComCustomer" table="com_customer">
+  	<id name="idCustomer" column="IDCUSTOMER">
+  		<generator class="native"/>
+  	</id>
+  	
+  	<property name="firstName" 				column="FIRSTNAME" 				type="string" 	not-null="true"/>
+  	<property name="lastName"				column="LASTNAME"				type="string" 	not-null="true"/>
+  	<property name="clientNumber"			column="CLIENTNUMBER"			type="string" 	not-null="true"/>
+  	<property name="personalPhoneNumber" 	column="PERSONALPHONENUMBER"	type="string" 	not-null="true"/>
+  	<property name="birthDay"				column="BIRTHDAY"				type="date"		not-null="true"/>
+  	<property name="nss"					column="NSS"					type="string"	not-null="true"/>
+  	<property name="rfc"					column="RFC"					type="string"	not-null="false"/>
+  	<property name="curp"					column="CURP"					type="string"	not-null="false"/>
+  	<property name="personalEmail"			column="PERSONALEMAIL"			type="string"	not-null="true"/>
+  	<property name="celNumber"				column="CELNUMBER"				type="string"	not-null="true"/>
+  	<property name="sex"					column="SEX"					type="integer"	not-null="true"/>
+  	<many-to-one name="address"				column="IDADDRESS"				class="iresmas.persistence.entity.component.address.CaAddress" lazy="false"/>
+  	<many-to-one name="clientStatus"		column="IDCLIENTSTATUS"			class="ComCatalog"	lazy="false"/>
+  	
+  </class>
+</hibernate-mapping>

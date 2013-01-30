@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+	<!--Author: Cristopher Cerrillo Callejas-->
+<hibernate-mapping package="iresmas.persistence.entity">
+  <class name="ComEmployee" table="com_employee">
+  	<id name="idEmployee" column="IDEMPLOYEE">
+  		<generator class="native"/>
+  	</id>
+  	
+  	<property name="firstName" 				column="FIRSTNAME" 				type="string" 	not-null="true"/>
+  	<property name="lastName" 				column="LASTNAME"				type="string"	not-null="true"/>
+  	<property name="birthDay"				column="BIRTHDAY"				type="date"		not-null="true"/>
+  	<property name="rfc"					column="RFC"					type="string"	not-null="false"/>
+  	<property name="nss"					column="NSS"					type="string"	not-null="true"/>
+  	<property name="curp"					column="CURP"					type="string"	not-null="false"/>
+  	<property name="personalPhoneNumber" 	column="PERSONALPHONENUMBER" 	type="string"	not-null="true"/>
+  	<property name="personalEmail"			column="PERSONALEMAIL"			type="string"	not-null="true"/>
+  	<property name="celNumber"				column="CELNUMBER"				type="string"	not-null="true"/>
+  	<property name="sex"					column="SEX"					type="integer"	not-null="true"/>
+  	<many-to-one name="address" 			column="IDADDRESS"				class="iresmas.persistence.entity.component.address.CaAddress" lazy="false"/>
+  	<property name="entryDate"				column="ENTRYDATE"				type="date"		not-null="true"/>
+  	<property name="employeeEmail"			column="EMPLOYEEMAIL"			type="string"	not-null="true"/>
+	<!--Revisar est propiedad ya que es factible que sea una tabla  	-->
+	<property name="idArea"					column="IDAREA"					type="integer"  not-null="true"/>
+	
+	<many-to-one name="supervisor"			column="IDSUPERVISOR"			class="ComEmployee" lazy="false"/>
+	
+	<joined-subclass name="iresmas.persistence.entity.security.SegUser" table="seg_user">
+		<key column="IDUSER"/>
+		<property name="userName" 			column="USERNAME" 				type="string" 	not-null="true"/>
+		<property name="password"			column="PASSWORD"				type="string"	not-null="true"/>
+		<property name="startVigency"		column="STARTVIGENCY"			type="date"		not-null="true"/>
+		<property name="endVigency"			column="ENDVIGENCY"				type="date"		not-null="true"/>
+		<property name="lastSessionDate"	column="LASTSESSIONDATE"		type="date"		not-null="true"/>
+		<property name="changeStatusDate"	column="CHANGESTATUSDATE"		type="date"		not-null="true"/>
+		<many-to-one name="statusUser"	column="IDSTATUSUSER"			class="ComCatalog" lazy="false"/>
+		<many-to-one name="role"			column="IDIRESMASROLE" 			class="iresmas.persistence.entity.security.SegRole" lazy="false"/>
+	
+	</joined-subclass>
+  	
+  	
+  </class>
+</hibernate-mapping>

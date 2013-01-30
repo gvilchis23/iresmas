@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/PSLMEX-ERP/!svn/ver/2457/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/test/iresmas/persistence/dao/hibernate/component/address
+END
+CaAddressDaoHibernateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/PSLMEX-ERP/!svn/ver/2457/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/test/iresmas/persistence/dao/hibernate/component/address/CaAddressDaoHibernateTest.java
+END
+CaStateDaoHibernateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/PSLMEX-ERP/!svn/ver/2306/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/test/iresmas/persistence/dao/hibernate/component/address/CaStateDaoHibernateTest.java
+END
+CaCountryDaoHibernateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/PSLMEX-ERP/!svn/ver/2306/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/test/iresmas/persistence/dao/hibernate/component/address/CaCountryDaoHibernateTest.java
+END

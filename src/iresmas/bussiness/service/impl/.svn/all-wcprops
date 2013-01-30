@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/PSLMEX-ERP/!svn/ver/2646/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl
+END
+ComCustomerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/PSLMEX-ERP/!svn/ver/2482/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/ComCustomerServiceImpl.java
+END
+BaseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/PSLMEX-ERP/!svn/ver/2482/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/BaseService.java
+END
+ComCatalogServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/PSLMEX-ERP/!svn/ver/2482/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/ComCatalogServiceImpl.java
+END
+LookupServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/PSLMEX-ERP/!svn/ver/2568/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/LookupServiceImpl.java
+END

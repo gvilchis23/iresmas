@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--Author: Cristopher Cerrillo Callejas -->
+	<!--Representa el mapeo objeto relacional entre la clase y la tabla  -->
+	
+<hibernate-mapping package="iresmas.persistence.entity.component.address">
+  <class name="CaAddress" table="ca_address">
+  
+  	<id name="idAddress" column="IDADDRESS">
+  		<generator class="native"/>
+  	</id>
+  	<property name="streetName" 		column="STREETNAME" 	type="string" not-null="true"/>
+  	<property name="externalNumber" 	column="EXTERNALNUMBER" type="string" not-null="true"/>
+  	<property name="internalNumber" 	column="INTERNALNUMBER" type="string"/>
+  	<property name="zipNumber" 			column="ZIPNUMBER" 		type="string" not-null="true"/>
+  	
+  	<many-to-one name="country" column="IDCOUNTRY" class="CaCountry"  	lazy="false"/>
+  	<many-to-one name="state"   column="IDSTATE"   class="CaState"  	lazy="false"/>
+  	<many-to-one name="city"    column="IDCITY"    class="CaCity" 		lazy="false"/>
+  	
+  	
+  </class>
+</hibernate-mapping>

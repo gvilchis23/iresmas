@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+            
+    <!--Author: Cristopher Cerrillo Callejas-->
+    <!--Permite el manejo de AOP como compleneto de la OOP-->
+    
+    <!--******************************************************************************************************-->
+    <!--                          Configuracion de avisos en los metodos que lo requieren                     -->
+    <!--									       NO MODIFICAR                                               -->
+    <!--******************************************************************************************************-->
+    <tx:advice id="txAdvice" >
+          <tx:attributes>
+              <tx:method name="get*"        propagation="SUPPORTS" read-only="true"/>
+              <tx:method name="*"           propagation="REQUIRED"/>
+          </tx:attributes>
+    </tx:advice>
+    <tx:advice id="userServiceTxAdvice">
+        <tx:attributes>
+            <tx:method name="save*"     rollback-for="UserExistException"/>
+            <tx:method name="remove*"	/>
+        </tx:attributes>
+    </tx:advice>
+    <tx:advice id="addressServiceTxAdvice">
+        <tx:attributes>
+            <tx:method name="save*" />
+            <tx:method name="remove*"	/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- ********************************************************************************************************************************** -->
+    <!--                                                           AOP                                                                      -->
+    <!-- ********************************************************************************************************************************** -->
+<!--    <aop:config>-->
+<!--    	<aop:advisor advice-ref="userServiceTxAdvice" pointcut="execution(* *..SegUserService.*(..))" order="0"/>-->
+<!--    	<aop:advisor advice-ref="addressServiceTxAdvice" pointcut="execution(* *..CaAddressService.*(..))"/>-->
+<!--    </aop:config>-->
+    
+    <!-- ************************************************************************************************************************* -->
+   	<!--                                 Inyeccion de dependencias para los beans de servicio                                      -->
+   	<!-- ************************************************************************************************************************* -->
+   	
+   	<!-- ************************************************************************************************************************* -->
+   	<!--                              Inyeccion de dependencias para los beans de servicio comunes                                 -->
+   	<!-- ************************************************************************************************************************* -->
+   	<bean id="service" class="iresmas.bussiness.service.impl.BaseService">
+   		<property name="dao" ref="dao"/>
+   	</bean>
+   	<bean id="lookupService" class="iresmas.bussiness.service.impl.LookupServiceImpl">
+   		<property name="lookupDao" ref="lookupDao"/>
+   	</bean>
+   	
+   	<!-- ************************************************************************************************************************* -->
+   	<!--                             Inyeccion de dependencias para los beans de servicio de seguridad                             -->
+   	<!-- ************************************************************************************************************************* -->
+   	
+   	<bean id="userService" class="iresmas.bussiness.service.impl.security.SegUserServiceImpl">
+   		<property name="addressDao" ref="addressDao"/>
+   		<property name="userDao" ref="userDao"/>
+   	</bean>
+   	<bean id="moduleService" class="iresmas.bussiness.service.impl.security.SegModuleServiceImpl">
+   		<property name="moduleDao" ref="moduleDao"></property>
+   	</bean>
+   	
+   	<!-- ************************************************************************************************************************* -->
+   	<!--                             Inyeccion de dependencias para los beans de servicio de domicilios                            -->
+   	<!-- ************************************************************************************************************************* -->
+   	<bean id="addressService" class="iresmas.bussiness.service.impl.address.CaAddressServiceImpl">
+   		<property name="addressDao" ref="addressDao"/>
+   	</bean>
+   	
+
+
+	<!-- Configuracion paar envio de emails PENDIENTE-->
+<!--	<bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage" scope="prototype">-->
+<!--        <property name="from" value="${mail.default.from}"/>-->
+<!--    </bean>-->
+	
+</beans>

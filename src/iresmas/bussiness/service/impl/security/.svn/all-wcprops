@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/PSLMEX-ERP/!svn/ver/2646/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/security
+END
+SegUserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/PSLMEX-ERP/!svn/ver/2562/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/security/SegUserServiceImpl.java
+END
+SegRoleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/PSLMEX-ERP/!svn/ver/2646/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/security/SegRoleServiceImpl.java
+END
+SegModuleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/PSLMEX-ERP/!svn/ver/2562/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/bussiness/service/impl/security/SegModuleServiceImpl.java
+END

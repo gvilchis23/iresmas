@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/PSLMEX-ERP/!svn/ver/2627/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/PSLMEX-ERP/!svn/ver/2313/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources/messages.properties
+END
+messages_en.properties
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/PSLMEX-ERP/!svn/ver/2627/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources/messages_en.properties
+END
+lbltree.properties
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/PSLMEX-ERP/!svn/ver/2504/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources/lbltree.properties
+END
+ReadProperties.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/PSLMEX-ERP/!svn/ver/2313/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources/ReadProperties.java
+END
+bridge-messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/PSLMEX-ERP/!svn/ver/2313/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/resources/bridge-messages.properties
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/PSLMEX-ERP/!svn/ver/2653/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/security
+END
+SegUserDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/PSLMEX-ERP/!svn/ver/2653/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/security/SegUserDaoHibernate.java
+END
+SegRoleDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/security/SegRoleDaoHibernate.java
+END
+SegModuleDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/security/SegModuleDaoHibernate.java
+END

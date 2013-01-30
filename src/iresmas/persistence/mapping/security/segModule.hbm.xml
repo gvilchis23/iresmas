@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--Author:Cristopher Cerrillo Callejas-->
+	<!--Representa el mapeo entre la clase SegModule y surelacion n..m con la clase SegRole-->
+	
+<hibernate-mapping package="iresmas.persistence.entity.security">
+  <class name="SegModule" table="seg_module">
+  	
+  	<id name="idIresmasModule" column="IDIRESMASMODULE">
+  		<generator class="native"/>
+  	</id>
+  	<property name="moduleName" 		column="MODULENAME" 		type="string" 		not-null="true"/>
+  	<many-to-one name="moduleFather" 	column="IDMODULEFATHER" 	class="SegModule" 	lazy="false"/>
+  	<property name="accessPrivilege" 	column="ACCESSPRIVILEGE" 	type="integer" 		precision="1"/>
+  	<property name="addPrivilege"		column="ADDPRIVILEGE"		type="integer"		precision="1"/>
+  	<property name="modifyPrivilege"	column="MODIFYPRIVILEGE"	type="integer"		precision="1"/>
+  	<property name="deletePrivilege"	column="DELETEPRIVILEGE"	type="integer"		precision="1"/>
+  	<property name="executePrivilege" 	column="EXECUTEPRIVILEGE"	type="integer"		precision="1"/>
+<!--  	<many-to-one name="role" column="IDIRESMASROLE" class="SegRole" lazy="false"/>-->
+  	
+  	
+  	<set name="roles" table="seg_rolemodule" inverse="true">
+  		<key column="IDIRESMASMODULE"/>
+  		<many-to-many column="IDIRESMASROLE" class="SegRole"/>
+  	</set>
+  	
+  </class>
+</hibernate-mapping>

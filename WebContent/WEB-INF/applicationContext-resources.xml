@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:jee="http://www.springframework.org/schema/jee"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+
+	<!--Configuracion de la conexion a base de datos-->
+	<!--Configuracion de carga de archivos de propiedades-->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- JNDI DataSource for J2EE environments -->
+<!--    <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/_iresmas"/>-->
+	<jee:jndi-lookup id="dataSource" jndi-name="${database.resource}"/>
+	
+</beans>

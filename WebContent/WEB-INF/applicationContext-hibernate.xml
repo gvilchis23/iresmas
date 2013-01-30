@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+">
+
+	<!--Author: Cristopher Cerrillo Callejas  -->
+	<!--Archivo de configuracion de Spring para DAO´s -->
+	<!-- ******************************************************************************************************** -->	
+	<!--                                Aqui se listan los mapeos de Hibernate                                    -->
+	<!-- ******************************************************************************************************** -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+           <property name="dataSource" ref="dataSource"/>  
+           <property name="mappingResources">
+               <list> 
+                   <value>iresmas/persistence/mapping/comCatalog.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/comCustomer.hbm.xml</value>
+				   
+				   <!--************************************************************************-->
+                   <!--************Archivos de mapeo del compnente de domicilios***************-->
+                   <!--************************************************************************-->
+                   <value>iresmas/persistence/mapping/component/address/caCountry.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/component/address/caState.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/component/address/caCity.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/component/address/caAddress.hbm.xml</value>
+                   
+                   <!--************************************************************************-->
+                   <!--*************Archivos de mapeo del compnente de securidad***************-->
+                   <!--************************************************************************-->
+                   <value>iresmas/persistence/mapping/security/segModule.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/security/segRole.hbm.xml</value>
+                   <value>iresmas/persistence/mapping/security/segUser.hbm.xml</value>
+               </list>
+           </property>
+           <property name="hibernateProperties">
+               <props>
+                    <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+                    <prop key="hibernate.show_sql">true</prop>
+                    <prop key="hibernate.connection.pool_size">1</prop>
+                    <prop key="hibernate.query.substitutions">true 1, false 0</prop>
+               </props>
+           </property>
+       </bean>
+       
+	<!--************************************************************************************************-->
+    <!--        Transaction manager for a single Hibernate SessionFactory (alternative to JTA)          -->
+    <!--************************************************************************************************-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+        
+    <!--************************************************************************************************-->
+	<!--          Lista de beans para inyeccion de dependencias de  componentes comunes                 -->
+	<!--************************************************************************************************-->
+	<bean id="dao" class="iresmas.persistence.dao.hibernate.BaseDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="lookupDao" class="iresmas.persistence.dao.hibernate.LookupDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="comCatalogDao" class="iresmas.persistence.dao.hibernate.ComCatalogDaoHibernate">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="comCustomerDao" class="iresmas.persistence.dao.hibernate.ComCustomerDaoHibernate">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <!--************************************************************************************************-->
+	<!--          Lista de beans para inyeccion de dependencias del componente de domicilios            -->
+	<!--************************************************************************************************-->
+    <bean id="countryDao" class="iresmas.persistence.dao.hibernate.component.address.CaCountryDaoHibernate">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+	<bean id="stateDao" class="iresmas.persistence.dao.hibernate.component.address.CaStateDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="cityDao" class="iresmas.persistence.dao.hibernate.component.address.CaCityDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="addressDao" class="iresmas.persistence.dao.hibernate.component.address.CaAddressDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!--************************************************************************************************-->
+	<!--          Lista de beans para inyeccion de dependencias del componente de seguridad             -->
+	<!--************************************************************************************************-->
+	<bean id="moduleDao" class="iresmas.persistence.dao.hibernate.security.SegModuleDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="roleDao" class="iresmas.persistence.dao.hibernate.security.SegRoleDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="userDao" class="iresmas.persistence.dao.hibernate.security.SegUserDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+    
+</beans>

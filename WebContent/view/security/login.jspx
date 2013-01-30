@@ -1,0 +1,100 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+      
+      
+      
+      
+      <head>
+            <link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
+            <title>IRESMAS</title>
+      </head>
+
+<ui:composition>
+<h:form> 
+<f:view locale="#{login.slcLanguaje}">
+    <f:loadBundle basename="iresmas.resources.messages" var="msg" />
+<table width="100%" border="0" bgcolor="#eeeeee">
+  <tr>
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+    <td><p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+    <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+    <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+    <p><f:verbatim>&amp;nbsp;</f:verbatim></p></td>
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+  </tr>
+  <tr>
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+    <td width="510" height="275" background="../../images/flogin.jpg"><table border="0" align="center" class="white">
+      <tr>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+      </tr>
+      <tr><td colspan="2">
+      <rich:message  for="txtUser"/>
+      </td></tr>
+      
+      <tr><td colspan="2">
+      <rich:message  for="txtPass"/>
+      </td></tr>
+          
+          
+          
+      <tr>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+        <td><table border="0" class="white">
+          <tr>
+            <td class="white"><h:outputText styleClass="white" value="#{msg.lbluser}" /></td>
+            <td><h:inputText maxlength="10" value="#{login.user}" >
+                <f:validateLength minimum="1" maximum="10" />
+               </h:inputText></td>
+          </tr>
+          <tr>
+            <td><h:outputFormat value="#{msg.lblpassword}"/></td>
+            <td><h:inputSecret maxlength="10" value="#{login.password}">
+            <f:validateLength minimum="1" maximum="10" />
+            </h:inputSecret></td>
+          </tr>
+          
+          
+                  
+        </table></td>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+      </tr>
+      <tr>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+        <td><p align="center">
+          <label>
+            <a4j:commandButton id="btnLogin" value="#{msg.lblsigin}" action="#{login.access}"/>
+            </label>
+          </p>
+          </td>
+        <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+      </tr>
+    </table></td>
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+  </tr>
+
+  <tr>
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+    <td><p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+      <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+      <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+      <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+      <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+      <p><f:verbatim>&amp;nbsp;</f:verbatim></p>
+    <p><f:verbatim>&amp;nbsp;</f:verbatim></p></td>
+
+    <td><f:verbatim>&amp;nbsp;</f:verbatim></td>
+  </tr>
+</table>
+  
+</f:view>
+</h:form>
+</ui:composition>
+
+</jsp:root>

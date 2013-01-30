@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/component/address
+END
+CaAddressDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/component/address/CaAddressDaoHibernate.java
+END
+CaCityDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/component/address/CaCityDaoHibernate.java
+END
+CaStateDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/component/address/CaStateDaoHibernate.java
+END
+CaCountryDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/PSLMEX-ERP/!svn/ver/2409/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/hibernate/component/address/CaCountryDaoHibernate.java
+END

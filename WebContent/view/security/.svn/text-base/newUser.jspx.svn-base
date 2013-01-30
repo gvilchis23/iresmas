@@ -1,0 +1,294 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+      
+      <head>
+      
+      <title>IRESMAS</title>
+      </head>
+ 
+<body>
+<ui:composition template="../templates/layout.xhtml">
+ 	
+ 	<ui:define name="body">
+ 		<h:form>
+ 		
+	<fieldset>
+
+            <legend><b>Personal Information</b></legend>
+            
+         <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbfirst}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" "/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lblast}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" "/>
+         </h:panelGroup>
+         </h:panelGrid>
+         
+         <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbbirthdate}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <rich:calendar datePattern="dd/MM/yyyy" />
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbgender}"/>
+         </h:panelGroup>
+        
+         <h:panelGroup>
+         <h:selectOneRadio value="man" > 
+         <f:selectItem itemLabel="#{msg.lbman}" />
+          <f:selectItem itemLabel="#{msg.lbwomen}" />
+         </h:selectOneRadio>
+         </h:panelGroup>
+         </h:panelGrid>
+         
+         <h:panelGrid columns="6">
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbcountry}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:selectOneMenu value=" ">
+         </h:selectOneMenu>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbstate}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:selectOneMenu value=" ">
+         </h:selectOneMenu>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbcity}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:selectOneMenu value=" ">
+         </h:selectOneMenu>
+         </h:panelGroup>
+        </h:panelGrid>
+        
+        <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbstreet}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" " size="60"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbzip}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" "/>
+         </h:panelGroup>
+       </h:panelGrid>
+       
+       <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbnss}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" " />
+         </h:panelGroup>
+       </h:panelGrid>
+       
+       <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbphone}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" " />
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbmobile}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" "/>
+         </h:panelGroup>
+       </h:panelGrid>
+       
+       <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbpemail}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" "/>
+         </h:panelGroup>
+      </h:panelGrid>
+            
+       </fieldset>
+       
+       <fieldset>
+
+            <legend><b>Company Information</b></legend>
+            
+            <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbarea}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+          <h:selectOneMenu value=" ">
+         </h:selectOneMenu>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbinmediate}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+          <h:selectOneMenu value=" ">
+         </h:selectOneMenu>
+         </h:panelGroup>
+      </h:panelGrid>
+      
+       <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbcemail}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:inputText value=" " size="60"/>
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbentrydate}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <rich:calendar datePattern="dd/MM/yyyy" />
+         </h:panelGroup>
+         
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbdependents}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+        <h:selectOneRadio value="man" > 
+         <f:selectItem itemLabel="Yes" />
+          </h:selectOneRadio>
+         </h:panelGroup>
+      </h:panelGrid>
+            
+			
+       </fieldset>
+       
+        <fieldset>
+
+            <legend><b>System Information</b></legend>
+            
+       <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbrole}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+        <h:selectOneMenu value=" " >
+         </h:selectOneMenu>
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbstatus}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+        <h:selectOneMenu value=" " >
+         </h:selectOneMenu>
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbuser}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+        <h:inputText value=" "/>
+         </h:panelGroup>
+      </h:panelGrid>
+            
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbpassword}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+        <h:inputSecret value=" "/>
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbstartvigency}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+       <rich:calendar datePattern="dd/MM/yyyy" />
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lbendvigency}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+       <rich:calendar datePattern="dd/MM/yyyy" />
+         </h:panelGroup>
+      </h:panelGrid>
+      
+      <h:panelGrid columns="4">
+         <h:panelGroup>
+         <h:outputText value="#{msg.lblastsession}"/>
+         </h:panelGroup>
+         
+         <h:panelGroup>
+       <rich:calendar datePattern="dd/MM/yyyy" />
+         </h:panelGroup>
+      </h:panelGrid>
+            
+  </fieldset>
+			
+			<a4j:commandButton value="#{msg.lbsave}"/>
+			<a4j:commandButton value="#{msg.lbcancel}"/>
+			
+ 		</h:form>			
+	</ui:define>
+
+ 
+</ui:composition>
+</body>
+</jsp:root>

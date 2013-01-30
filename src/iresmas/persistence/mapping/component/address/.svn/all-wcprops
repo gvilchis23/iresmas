@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/mapping/component/address
+END
+caCity.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/mapping/component/address/caCity.hbm.xml
+END
+caState.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/mapping/component/address/caState.hbm.xml
+END
+caCountry.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/mapping/component/address/caCountry.hbm.xml
+END
+caAddress.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/PSLMEX-ERP/!svn/ver/2342/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/mapping/component/address/caAddress.hbm.xml
+END

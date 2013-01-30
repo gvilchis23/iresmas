@@ -1,0 +1,34 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+ 
+<style>
+        .col, .col2 {
+            width:50%;
+            vertical-align:top;
+        }
+    </style>
+
+<ui:composition template="../templates/layout.xhtml">
+ 	<ui:define name="body">
+	   <h:form id="treeForm">
+        <a4j:outputPanel ajaxRendered="false">
+                <rich:panel id="treePanel">
+                    <f:facet name="header">Tree</f:facet>
+                    <rich:tree id="tree" ajaxSubmitSelection="false" switchType="ajax" value="#{rolesTree.rootNode}" var="node">
+                        <rich:treeNode >
+                            <h:selectBooleanCheckbox id="respuestas" value="#{role.option}"/>
+                            <h:outputText value="#{node}"/>
+                        </rich:treeNode>
+                    </rich:tree>
+                </rich:panel>
+        </a4j:outputPanel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</jsp:root>

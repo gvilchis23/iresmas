@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/PSLMEX-ERP/!svn/ver/2654/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao
+END
+Dao.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/PSLMEX-ERP/!svn/ver/2654/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/Dao.java
+END
+ComCustomerDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/PSLMEX-ERP/!svn/ver/2375/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/ComCustomerDao.java
+END
+ComCatalogDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/PSLMEX-ERP/!svn/ver/2477/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/ComCatalogDao.java
+END
+LookupDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/PSLMEX-ERP/!svn/ver/2561/trunk/5.%20Desarrollo/5.03%20Fuentes/RSH/iresmas/src/iresmas/persistence/dao/LookupDao.java
+END

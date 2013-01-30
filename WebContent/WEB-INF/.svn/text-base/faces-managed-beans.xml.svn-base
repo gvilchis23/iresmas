@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+    
+    <managed-bean>
+        <managed-bean-name>basePage</managed-bean-name>
+        <managed-bean-class>iresmas.webapp.action.BasePage</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+	<managed-bean> 
+      	<managed-bean-name>login</managed-bean-name>
+      	<managed-bean-class>iresmas.managed.security.LoginForm</managed-bean-class>
+      	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <!-- PARA LISTADO DE USUARIOS -->
+	<managed-bean>
+		<managed-bean-name>userList</managed-bean-name>
+		<managed-bean-class>iresmas.managed.security.UserList</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>userService</property-name>
+			<value>#{userService}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>segUser</property-name>
+			<value>#{segUser.firstName}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean> 
+	      <description>RolePermissions Bean</description>
+	      <managed-bean-name>role</managed-bean-name>
+	      <managed-bean-class>iresmas.managed.security.RolePermissionsForm</managed-bean-class>
+	      <managed-bean-scope>request</managed-bean-scope>
+	      <managed-property><property-name>segRoleService</property-name>
+	      <value>#{segRoleService}</value>
+	      </managed-property>
+	</managed-bean>
+
+
+
+
+	<managed-bean> 
+	      <description>User Bean</description>
+	
+	      <managed-bean-name>users</managed-bean-name>
+	      <managed-bean-class>iresmas.managed.security.Users</managed-bean-class>
+	      <managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean> 
+	      <description>tree Bean</description>
+	
+	      <managed-bean-name>rolesTree</managed-bean-name>
+	      <managed-bean-class>iresmas.managed.security.RolesTree</managed-bean-class>
+	      <managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+
+</faces-config>

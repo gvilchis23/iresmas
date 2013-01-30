@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--Author:Cristopher Cerrillo Callejas-->
+	<!--Representa el mapeo entre la clase SegRole y surelacion n..m con la clase SegModule-->
+	
+<hibernate-mapping package="iresmas.persistence.entity.security">
+  <class name="SegRole" table="seg_role">
+  	<id name="idIresmasRole" column="IDIRESMASROLE">
+  		<generator class="native"/>
+  	</id>
+  	<property name="roleName" 			column="ROLENAME" 			type="string" not-null="true"/>
+  	<property name="roleDescription"	column="ROLEDESCRIPTION"	type="string" not-null="true"/>
+  	
+  	<set name="modules" table="seg_rolemodule" inverse="true" lazy="false">
+  		<key column="IDIRESMASROLE"/>
+  		<many-to-many column="IDIRESMASMODULE" class="SegModule"/>		
+  	</set>
+  </class>
+</hibernate-mapping>
